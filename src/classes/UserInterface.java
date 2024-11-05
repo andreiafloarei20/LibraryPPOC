@@ -21,7 +21,7 @@ public class UserInterface {
         System.out.println();
 
         while(true){
-            System.out.println("Enter command: ");
+            System.out.println("Enter command: sex");
             System.out.println("list - Display the available books");
             System.out.println("add - Add a book manually");
             System.out.println("exit - Exit App");
@@ -36,6 +36,7 @@ public class UserInterface {
             }
 
             if(command.equals("add")){
+
                 System.out.println();
                 System.out.println("Enter Title: ");
                 String title = scanner.nextLine();
