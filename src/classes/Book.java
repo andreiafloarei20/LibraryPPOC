@@ -1,6 +1,9 @@
 package classes;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String title;
     private String author;
     private String category;
@@ -34,7 +37,16 @@ public class Book {
         }
     }
 
+    public void returnBook(){
+        if(this.isBorrowed){
+            this.isBorrowed = false;
+            System.out.println("You successfully returned the book!");
+        } else {
+            System.out.println("The book was not borrowed yet.");
+        }
+    }
+
     public String toString(){
-        return "Title: " + this.getTitle() + ", Author: " + this.getAuthor();
+        return "Title: " + this.getTitle() + ", Author: " + this.getAuthor() + ", Category: " + this.getCategory();
     }
 }

@@ -1,6 +1,7 @@
 package classes;
 
-import java.sql.SQLOutput;
+import java.io.*;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -12,7 +13,7 @@ public class UserInterface {
         this.library = library;
     }
 
-    public void start(){
+    public void start() throws IOException, ClassNotFoundException {
         System.out.println("==============================");
         System.out.println();
         System.out.println("    Library Management App    ");
@@ -21,7 +22,7 @@ public class UserInterface {
         System.out.println();
 
         while(true){
-            System.out.println("Enter command: sex");
+            System.out.println("Enter command: ");
             System.out.println("list - Display the available books");
             System.out.println("add - Add a book manually");
             System.out.println("exit - Exit App");
@@ -52,9 +53,32 @@ public class UserInterface {
             if(command.equals("exit")){
                 System.out.println();
                 System.out.println("See you around!");
+                library.saveLibrary("library.dat");
                 break;
             }
         }
 
     }
+
+
+
+//    public void loadData(String filename, Library library){
+//        try(Scanner reader = new Scanner(Paths.get(filename))){
+//            while(reader.hasNextLine()){
+//                String book = reader.nextLine();
+//                String[] data = book.split(",");
+//
+//                String title = data[0];
+//                String author = data[1];
+//                String category = data[2];
+//
+//                library.addBook(new Book(title, author, category));
+//            }
+//        }catch(Exception e){
+//            System.out.println("Could not open the file." + e.getMessage());
+//        }
+//    }
+
+
+
 }
