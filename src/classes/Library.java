@@ -1,7 +1,9 @@
 package classes;
 
 import java.io.*;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Library implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -13,6 +15,33 @@ public class Library implements Serializable {
 
     public void addBook(Book book){
         this.books.add(book);
+    }
+
+    public void removeBook(String title){
+        for(Book book : books){
+            if(book.getTitle().equals(title)){
+                this.books.remove(book);
+                System.out.println("Book successfully removed!");
+                return;
+            }
+        }
+        System.out.println("Book not found.");
+    }
+
+    public void receiveStock(String filename){
+        try(Scanner reader = new Scanner(Paths.get(filename))){
+            while(reader.hasNextLine()){
+                String input = reader.nextLine();
+                String[] data = input.split(",");
+
+                String name = data[0];
+                String author = data[1];
+                String category = data[2];
+                this.addBook(new Book(name, author, category));
+            }
+        }catch(Exception e ){
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 
     public void borrowBook(String title){
@@ -41,6 +70,10 @@ public class Library implements Serializable {
         }
     }
 
+    public ArrayList<Book> getBooks(){
+        return this.books;
+    }
+
     public void saveLibrary(String filename){
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))){
             oos.writeObject(this);
@@ -61,6 +94,5 @@ public class Library implements Serializable {
             return new Library();
         }
     }
-
 
 }
