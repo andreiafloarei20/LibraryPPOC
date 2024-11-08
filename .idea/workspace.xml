@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62d6de82-fb57-43e5-b4bf-6f3201eed100" name="Changes" comment="Added the function of report generation">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anotherApproach/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anotherApproach/classes/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anotherApproach/classes/BorrowRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anotherApproach/classes/FileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anotherApproach/classes/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anotherApproach/classes/UserInterface.java" afterDir="false" />
+    <list default="true" id="62d6de82-fb57-43e5-b4bf-6f3201eed100" name="Changes" comment="Refactored everything a little bit">
+      <change afterPath="$PROJECT_DIR$/src/project/exceptions/InvalidAuthor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/exceptions/InvalidCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/BorrowRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/BorrowRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/classes/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/classes/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/classes/BorrowRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/classes/BorrowRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/classes/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/classes/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/classes/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/classes/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/classes/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/classes/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +26,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -139,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730929568139</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactored everything a little bit">
+      <option name="closed" value="true" />
+      <created>1731053412281</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731053412281</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +164,7 @@
     <MESSAGE value="Book and Library classes + a minimal UI" />
     <MESSAGE value="Added Serialization" />
     <MESSAGE value="Added the function of report generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the function of report generation" />
+    <MESSAGE value="Refactored everything a little bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored everything a little bit" />
   </component>
 </project>
